@@ -27,12 +27,12 @@ def result():
     value=combobox.current()
     #tk.Textの設定    
     text = tk.Text(width=40,height=6,font=("メイリオ", 10))
-    text.place(x=340, y=520)
+    text.place(x=340, y=470)
     #既に表示している画像を消す
     canvas.delete('del_img')
     for i in range(len(list)):
         if i ==value:
-            canvas.create_image(500,350,image=imgs[value],tag='del_img')
+            canvas.create_image(500,300,image=imgs[value],tag='del_img')
             #既に表示されてる文がある場合は削除
             text.delete("1.0", tk.END) 
             text.insert("1.0", '{}'.format(texts[value]))
@@ -42,7 +42,7 @@ root=tk.Tk()
 root.title('東京')
 root.resizable(False,False)
 #キャンバスの大きさ
-canvas=tk.Canvas(root,width=1000,height=650,bg='silver')
+canvas=tk.Canvas(root,width=1000,height=600,bg='silver')
 canvas.pack()
 #画像を配列に格納
 imgs=[
@@ -56,10 +56,10 @@ imgs=[
 ]
 #プログラム実行時、最初に画面に表示される画像
 img=tk.PhotoImage(file="tokyo_tower.png")
-canvas.create_image(500,350,image=img,tag='del_img')
+canvas.create_image(500,300,image=img,tag='del_img')
 #見出し文('italic'で文字を斜体)
 label=tk.Label(root,text='～東京の昔と今～',font=('ＭＳ ゴシック',25,'italic'),bg='silver')
-label.place(x=350,y=40)
+label.place(x=350,y=25)
 
 
 #項目
