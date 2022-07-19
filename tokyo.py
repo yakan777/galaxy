@@ -59,7 +59,7 @@ img=tk.PhotoImage(file="tokyo_tower.png")
 canvas.create_image(500,300,image=img,tag='del_img')
 #見出し文('italic'で文字を斜体)
 label=tk.Label(root,text='～東京の昔と今～',font=('ＭＳ ゴシック',25,'italic'),bg='silver')
-label.place(x=350,y=25)
+label.place(x=350,y=20)
 
 
 #項目
